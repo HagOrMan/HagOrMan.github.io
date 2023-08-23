@@ -1,11 +1,13 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
   theme: {
     container: {
@@ -16,6 +18,14 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -25,6 +35,18 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          // Customize it on globals.css :root
+          50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
+          100: 'rgb(var(--tw-color-primary-100) / <alpha-value>)',
+          200: 'rgb(var(--tw-color-primary-200) / <alpha-value>)',
+          300: 'rgb(var(--tw-color-primary-300) / <alpha-value>)',
+          400: 'rgb(var(--tw-color-primary-400) / <alpha-value>)',
+          500: 'rgb(var(--tw-color-primary-500) / <alpha-value>)',
+          600: 'rgb(var(--tw-color-primary-600) / <alpha-value>)',
+          700: 'rgb(var(--tw-color-primary-700) / <alpha-value>)',
+          800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
+          900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
+          950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
