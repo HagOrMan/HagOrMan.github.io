@@ -6,7 +6,7 @@ const nav_items = [
     {
         title: 'Projects',
         dropdownItems: [
-                { title: 'All Projects', link: '/projects', description: '' },
+                { title: 'All Projects', link: '/projects' },
                 { title: 'Island Builder', link: '/island-builder', description: 'Create islands with different biomes and connected cities!'  },
                 { title: 'MediSafe', link: '/medisafe', description: 'Never take conflicting prescriptions again with Medisafe!'  },
                 { title: 'MonPoke', link: '/monpoke', description: 'Catch your favourite MonPokes using python and pygame'  },

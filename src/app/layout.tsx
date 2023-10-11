@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/layout/Navbar';
+import { Navbar } from '@/components/layout/Navbar'; //Shadcn_Navbar, Navbar
 import '@/styles/shadcn_global.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
